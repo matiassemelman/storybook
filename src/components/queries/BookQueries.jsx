@@ -8,7 +8,7 @@ const BookQueries = ({ text, className, onClick }) => {
     <QueryBarContainer>
       <QueryBarItem>
         <QueryBarLabel>Lugar</QueryBarLabel>
-       <Dropdown/>
+       {/* <Dropdown/> */}
 
       </QueryBarItem>
       <QueryBarItem>
