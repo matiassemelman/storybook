@@ -1,20 +1,36 @@
-
 import { useState } from "react";
 import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./queries/styled"
 
+const options = ["El Chalten", "Ushuaia"]
+
 const Dropdown = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('¿A dónde vas?');
+
+  const toggling = () => setIsOpen(!isOpen);
+
+  const onOptionClicked = value => () => {
+    setSelectedOption(value);
+    setIsOpen(false);
+    console.log(selectedOption);
+  };
     
   return (
     <DropDownContainer>
-        <DropDownHeader>Mangoes</DropDownHeader>
-        <DropDownListContainer>
-          <DropDownList>
-            <ListItem>Mangoes</ListItem>
-            <ListItem>Apples</ListItem>
-            <ListItem>Oranges</ListItem>
-          </DropDownList>
-        </DropDownListContainer>
+        <DropDownHeader onClick={toggling}>
+          {selectedOption || "Mangoes"}
+        </DropDownHeader>
+        {isOpen && (
+          <DropDownListContainer>
+            <DropDownList>
+              {options.map(option => (
+                <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                  {option}
+                </ListItem>
+              ))}
+            </DropDownList>
+          </DropDownListContainer>
+        )}
       </DropDownContainer>
   )
 }

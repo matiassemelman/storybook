@@ -58,7 +58,4 @@ export const DropDownList = styled("ul")`
 export const ListItem = styled("li")`
   list-style: none;
   margin-bottom: 0.8em;
-  &:first-child {
-padding-top: 0.8em;
-}
 `;

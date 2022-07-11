@@ -7,7 +7,7 @@ const BookQueries = ({ text, className, onClick }) => {
     <QueryBarContainer>
       <QueryBarItem>
         <QueryBarLabel>Lugar</QueryBarLabel>
-
+        <p>{destination}</p>
       </QueryBarItem>
       <QueryBarItem>
         <QueryBarLabel>Fecha llegada</QueryBarLabel>
