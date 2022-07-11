@@ -1,6 +1,8 @@
 import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./queries/styled"
 
 const Dropdown = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    
   return (
     <DropDownContainer>
         <DropDownHeader>Mangoes</DropDownHeader>
