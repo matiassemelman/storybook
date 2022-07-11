@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { QueryBarContainer, QueryBarItem, QueryBarLabel } from "./styled";
-import Dropdown from './../Dropdown';
 
 const BookQueries = ({ text, className, onClick }) => {
   const [destination, setDestination] = useState('¿A dónde vas?')
@@ -8,7 +7,6 @@ const BookQueries = ({ text, className, onClick }) => {
     <QueryBarContainer>
       <QueryBarItem>
         <QueryBarLabel>Lugar</QueryBarLabel>
-       {/* <Dropdown/> */}
 
       </QueryBarItem>
       <QueryBarItem>
