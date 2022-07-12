@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./queries/styled"
+import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "../queries/styled"
 
 const options = ["El Chalten", "Ushuaia"]
 
