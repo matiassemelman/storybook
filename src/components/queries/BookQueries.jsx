@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Dropdown from "../dropdown/Dropdown"
 import { QueryBarContainer, QueryBarItem, QueryBarLabel } from "./styled";
 
 const BookQueries = ({ text, className, onClick }) => {
@@ -7,7 +8,7 @@ const BookQueries = ({ text, className, onClick }) => {
     <QueryBarContainer>
       <QueryBarItem>
         <QueryBarLabel>Lugar</QueryBarLabel>
-        <p>{destination}</p>
+        <Dropdown/>
       </QueryBarItem>
       <QueryBarItem>
         <QueryBarLabel>Fecha llegada</QueryBarLabel>
