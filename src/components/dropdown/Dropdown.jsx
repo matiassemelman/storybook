@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./styled"
 
-const options = ["El Chalten", "Ushuaia"]
+const options = ["El Chalten", "Ushuaia", "Hawai"]
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
