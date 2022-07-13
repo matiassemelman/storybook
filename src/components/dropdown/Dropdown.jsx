@@ -1,45 +1,26 @@
-import { useState } from "react";
-import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem, ListItemContainer,  ImageContainer, Image, TextContainer, ItemHeader, ItemLocationText  } from "./styled"
+import SelectSearch from 'react-select-search';
+import Fuse from 'fuse.js'
+
 import activities from '../../db/activities.json'
 
 const Dropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('¿A dónde vas?');
-
-  const toggling = () => setIsOpen(!isOpen);
-
-  const onOptionClicked = value => () => {
-    setSelectedOption(value);
-    setIsOpen(false);
-  };
     
+  const options = {
+    includeScore: true,
+    // Search in `author` and in `tags` array
+    keys: ['province', 'country']
+  }
+
+  const fuse = new Fuse(activities, {
+    keys: ['province', 'country'],
+    valueKey: "province"
+  })
+
+
   return (
-    <DropDownContainer>
-        <DropDownHeader onClick={toggling}>
-          {selectedOption || "Cargando..."}
-        </DropDownHeader>
-        {isOpen && (
-          <DropDownListContainer>
-            <DropDownList>
-              {activities.map(activity => (
-                <ListItem onClick={onOptionClicked(activity.destination)} key={Math.random()}>
-                  <ListItemContainer>
-                    <ImageContainer>
-                      <Image src={activity.url} alt="Photo of destination" width="48px" height="48px"/>
-                    </ImageContainer>
-                    <TextContainer>
 
-                 <ItemHeader>{activity.destination}</ItemHeader>
-                 <ItemLocationText>{activity.province} - {activity.country}</ItemLocationText> 
-
-                    </TextContainer>
-                  </ListItemContainer>
-                </ListItem>
-              ))}
-            </DropDownList>
-          </DropDownListContainer>
-        )}
-      </DropDownContainer>
+<SelectSearch options={activities}  autoFocus autoComplete="on" placeholder="¿A dónde vas?" search />
+    
   )
 }
 

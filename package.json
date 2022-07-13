@@ -10,8 +10,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "fuse.js": "^6.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-select-search": "^3.0.10",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
