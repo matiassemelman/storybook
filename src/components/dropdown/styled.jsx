@@ -52,7 +52,7 @@ export const TextContainer = styled('div')`
 export const ItemHeader = styled('h5')`
 margin-top: 0.3em;
 margin-bottom: 0;
-font-size: 1.02em;
+font-size: 1.03em;
 `
 export const ItemLocationText = styled('small')`
 color: hsl(10, 0%, 30%);
