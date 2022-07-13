@@ -27,21 +27,34 @@ export const DropDownList = styled("ul")`
     padding-top: 0.8em;
   }
 `;
+export const ListItem = styled("li")`
+  list-style: none;
+`;
+
 
 export const ListItemContainer = styled('div')`
   display: flex;
-  padding-top: 1em;
-  padding-left: 1em;
+  padding: 1em 1em 1em;
+  
   
 `
 
 export const ImageContainer = styled('div')`
+margin-right: 1em;
 `;
 
 export const Image = styled('img')`
 border-radius: 10px;
 `
+export const TextContainer = styled('div')`
+`
 
-export const ListItem = styled("li")`
-  list-style: none;
-`;
+export const ItemHeader = styled('h5')`
+margin-top: 0.3em;
+margin-bottom: 0;
+font-size: 1.02em;
+`
+export const ItemLocationText = styled('small')`
+color: hsl(10, 0%, 30%);
+font-size: 0.94em
+`
