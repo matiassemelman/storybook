@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "destination": "El Calafate",
+        "province": "Santa Cruz",
+        "country": "Argentina",
+        "url": "https://cdn.getyourguide.com/img/tour/5dd005494dd12.jpeg/97.jpg"
+    },
+    {
+        "id": "2",
+        "destination": "El Chaltén",
+        "province": "Santa Cruz",
+        "country": "Argentina",
+        "url": "https://cdn.getyourguide.com/img/tour/5dd005494dd12.jpeg/97.jpg"
+    },
+    {
+        "id": "3",
+        "destination": "Ushuaia",
+        "province": "Tierra del Fuego",
+        "country": "Argentina",
+        "url": "https://cdn.getyourguide.com/img/tour/5dd005494dd12.jpeg/97.jpg"
+    }
+]
