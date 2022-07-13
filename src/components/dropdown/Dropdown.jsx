@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./styled"
+import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem, ListItemContainer,  ImageContainer, Image  } from "./styled"
 import activities from '../../db/activities.json'
 
 const Dropdown = () => {
@@ -23,8 +23,13 @@ const Dropdown = () => {
             <DropDownList>
               {activities.map(activity => (
                 <ListItem onClick={onOptionClicked(activity.destination)} key={Math.random()}>
-               
+                  <ListItemContainer>
+                    <ImageContainer>
+                      <Image src={activity.url} alt="Photo of destination" width="48px" height="48px"/>
+                    </ImageContainer>
                  <h5>{activity.destination}</h5> 
+
+                  </ListItemContainer>
                 </ListItem>
               ))}
             </DropDownList>
