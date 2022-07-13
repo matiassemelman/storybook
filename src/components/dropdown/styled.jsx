@@ -20,11 +20,8 @@ export const DropDownList = styled("ul")`
   margin: 0;
   padding-left: 1em;
   border-radius: 30px;
-
-  background: #ffffff;
   box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  font-size: 1.3rem;
   font-weight: 500;
   &:first-child {
     padding-top: 0.8em;
