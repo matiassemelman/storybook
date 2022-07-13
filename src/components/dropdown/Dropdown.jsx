@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { DropDownContainer, DropDownHeader, DropDownListContainer, DropDownList, ListItem } from "./styled"
-
-const options = ["El Chalten", "Ushuaia", "Hawai"]
+import activities from '../../db/activities.json'
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,20 +11,20 @@ const Dropdown = () => {
   const onOptionClicked = value => () => {
     setSelectedOption(value);
     setIsOpen(false);
-    console.log(selectedOption);
   };
     
   return (
     <DropDownContainer>
         <DropDownHeader onClick={toggling}>
-          {selectedOption || "Mangoes"}
+          {selectedOption || "Cargando..."}
         </DropDownHeader>
         {isOpen && (
           <DropDownListContainer>
             <DropDownList>
-              {options.map(option => (
-                <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
-                  {option}
+              {activities.map(activity => (
+                <ListItem onClick={onOptionClicked(activity.destination)} key={Math.random()}>
+               
+                 <h5>{activity.destination}</h5> 
                 </ListItem>
               ))}
             </DropDownList>
