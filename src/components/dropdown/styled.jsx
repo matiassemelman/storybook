@@ -31,7 +31,20 @@ export const DropDownList = styled("ul")`
   }
 `;
 
+export const ListItemContainer = styled('div')`
+  display: flex;
+  padding-top: 1em;
+  padding-left: 1em;
+  
+`
+
+export const ImageContainer = styled('div')`
+`;
+
+export const Image = styled('img')`
+border-radius: 10px;
+`
+
 export const ListItem = styled("li")`
   list-style: none;
-  margin-bottom: 0.8em;
 `;
